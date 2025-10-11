@@ -1,8 +1,18 @@
+import React from "react"
+import { Nav,Hero,About,Projects,Stack,Upto,Footer,Hire } from "./sections"
+
 function App() {
 
   return (
     <>
-      <h1 className="bg-amber-500">hi</h1>
+      <Nav/>
+      <Hero/>
+      <About/>
+      <Projects/>
+      <Stack/>
+      <Upto/>
+      <Footer/>
+      <Hire/>
     </>
   )
 }

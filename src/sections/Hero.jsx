@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 function Hero() {
   const ref = useRef(null);
@@ -36,6 +37,28 @@ function Hero() {
       >
         Software Engineer
       </motion.p>
+
+     {/* Scroll Down Hint */}
+{/* Scroll Down Hint */}
+<motion.div
+  initial={{ opacity: 0, y: 0 }}
+  animate={{ opacity: 1, y: [0, 12, 0] }}
+  transition={{
+    opacity: { duration: 0.8, ease: "easeOut" }, // fades in once
+    y: {
+      duration: 1.5,
+      repeat: Infinity,
+      ease: "easeInOut",
+    },
+  }}
+  className="absolute bottom-10 cursor-pointer"
+>
+  <a href="#about" aria-label="Scroll Down">
+    <ChevronDown size={36} className="text-[#bfa980]" />
+  </a>
+</motion.div>
+
+
     </section>
   );
 }

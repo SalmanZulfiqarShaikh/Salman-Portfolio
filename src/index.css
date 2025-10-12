@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+body {
+    background: #F5F0E6;
+}
+@layer base {
+  .font-retro {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+}

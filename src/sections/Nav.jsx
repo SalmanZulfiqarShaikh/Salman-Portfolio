@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 function Nav() {
-  const links = ["Home", "About", "Projects", "Skills"];
+  const links = ["Home", "Projects", "About", "Skills"];
   const [hovered, setHovered] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 

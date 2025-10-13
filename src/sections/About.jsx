@@ -26,7 +26,7 @@ function About() {
             w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 
             object-cover rounded-2xl shadow-lg border border-[#bfa980]/30
             transition-all duration-300 ease-in-out
-            grayscale md:hover:grayscale-0
+            
           "
         />
       </motion.div>

@@ -8,8 +8,8 @@ function App() {
       <Nav/>
       <Hero/>
       <About/>
-      <Stack/>
       <Projects/>
+      <Stack/>
       <Upto/>
       <Footer/>
       <Hire/>

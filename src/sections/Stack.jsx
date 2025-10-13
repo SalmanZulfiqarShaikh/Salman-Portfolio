@@ -26,7 +26,7 @@ function Stack() {
     <section
       ref={ref}
       id="skills"
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-4 "
+      className="min-h-screen flex flex-col items-center justify-center px-6 ]"
     >
       {/* Section Title */}
       <motion.h1
@@ -52,7 +52,7 @@ function Stack() {
               <img
                 src={skill.logo}
                 alt={skill.name}
-                className="h-12 md:h-16 object-contain filter grayscale group-hover:grayscale-0 transition-all duration-700"
+                className="h-12 md:h-16 object-contain filter md:grayscale group-hover:grayscale-0 transition-all duration-700"
               />
             </div>
             <p className="text-[#bfa980] text-sm md:text-base tracking-widest font-light font-sans uppercase">

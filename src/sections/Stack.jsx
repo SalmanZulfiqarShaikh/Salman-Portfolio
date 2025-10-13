@@ -3,7 +3,7 @@ import { motion, useInView } from "framer-motion";
 import reactLogo from "../assets/logos/react.png";
 import tailwindLogo from "../assets/logos/tailwind.png";
 import reduxLogo from "../assets/logos/redux.png";
-import jsLogo from "../assets/logos/javascript.png";
+import jsLogo from "../assets/logos/Javascript.png";
 import bootstrapLogo from "../assets/logos/bootstrap.png";
 import framerLogo from "../assets/logos/framer-motion.svg";
 import gitLogo from "../assets/logos/git.png";

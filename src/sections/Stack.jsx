@@ -7,6 +7,8 @@ import jsLogo from "../assets/logos/javascript.png";
 import bootstrapLogo from "../assets/logos/bootstrap.png";
 import framerLogo from "../assets/logos/framer-motion.svg";
 import gitLogo from "../assets/logos/git.png";
+import wordPress from "../assets/logos/wordpress.png"
+import n8n from "../assets/logos/n8n.png"
 
 function Stack() {
   const ref = useRef(null);
@@ -15,11 +17,13 @@ function Stack() {
   const skills = [
     { name: "React", logo: reactLogo },
     { name: "Tailwind", logo: tailwindLogo },
-    { name: "Redux", logo: reduxLogo },
     { name: "JavaScript", logo: jsLogo },
-    { name: "Bootstrap", logo: bootstrapLogo },
     { name: "Framer Motion", logo: framerLogo },
+    {name: "n8n", logo: n8n},
+    { name: "Redux", logo: reduxLogo },
+    { name: "Bootstrap", logo: bootstrapLogo },
     { name: "Git", logo: gitLogo },
+    {name: "WordPress", logo: wordPress},
   ];
 
   return (

@@ -45,13 +45,13 @@ function Footer() {
         <div >
           <h2 className="text-xl font-semibold mb-4 text-[#bfa980]">Get In Touch</h2>
           <a
-            href="mailto:salmanzulfiqar04@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=salmanzulfiqar04@gmail.com" target="_blank"
             className="flex items-center justify-center sm:justify-start gap-2 hover:text-[#bfa980] transition-colors"
           >
             <SiGmail  /> <p>salmanzulfiqar04@gmail.com</p>
           </a>
           <a
-          href="/resume.pdf"
+          href="/Resume.pdf"
               download
               target="_blank"
               className='flex items-center justify-center sm:justify-start gap-2 hover:text-[#bfa980] transition-colors'

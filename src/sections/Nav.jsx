@@ -51,7 +51,7 @@ function Nav() {
             className="relative"
           >
             <a
-              href="/resume.pdf"
+              href="/Resume.pdf"
               download
               target="_blank"
               className={`text-sm uppercase tracking-widest text-[#0d0d0d] transition-all duration-300 ${

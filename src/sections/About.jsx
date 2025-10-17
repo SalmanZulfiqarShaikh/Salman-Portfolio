@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Salman from "../assets/images/salman.webp"
-
+import Hire from "../components/Hire"
 function About() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, amount: 0.3 });
@@ -50,6 +50,7 @@ function About() {
           ensuring every project feels intuitive, aesthetic, and meaningful.
         </p>
       </motion.div>
+      <Hire/>
     </section>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react"
-import { Nav,Hero,About,Projects,Stack,Upto,Footer,Hire } from "./sections"
+import { Nav,Hero,About,Projects,Stack,Upto,Footer} from "./sections"
 
 function App() {
 
@@ -12,7 +12,7 @@ function App() {
       <Stack/>
       <Upto/>
       <Footer/>
-      <Hire/>
+      
     </>
   )
 }

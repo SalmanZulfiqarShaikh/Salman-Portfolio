@@ -9,6 +9,9 @@ import framerLogo from "../assets/logos/framer-motion.svg";
 import gitLogo from "../assets/logos/git.png";
 import wordPress from "../assets/logos/wordpress.png"
 import n8n from "../assets/logos/n8n.png"
+import python from "../assets/logos/python.webp";
+import java from "../assets/logos/java.png";
+import supabase from "../assets/logos/supabase.webp";
 
 function Stack() {
   const ref = useRef(null);
@@ -17,12 +20,15 @@ function Stack() {
   const skills = [
     { name: "React", logo: reactLogo },
     { name: "Tailwind", logo: tailwindLogo },
+    {name: "Supabase", logo: supabase},
     { name: "JavaScript", logo: jsLogo },
-    { name: "Framer Motion", logo: framerLogo },
+    {name: "Python", logo: python},
+    {name: "Java", logo: java},
     {name: "n8n", logo: n8n},
+    { name: "Git", logo: gitLogo },
+    { name: "Framer Motion", logo: framerLogo },
     { name: "Redux", logo: reduxLogo },
     { name: "Bootstrap", logo: bootstrapLogo },
-    { name: "Git", logo: gitLogo },
     {name: "WordPress", logo: wordPress},
   ];
 

@@ -20,7 +20,7 @@ function Upto() {
       points: [
         "Refining TailwindCSS design patterns",
         "Experimenting with React 19 features",
-        "Exploring GSAP and Three.js"
+        "Learning  Design Systems",
       ],
       icon: FaCode
     },

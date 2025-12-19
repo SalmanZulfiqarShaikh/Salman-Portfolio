@@ -7,7 +7,7 @@ function Hire() {
 
   return (
     <a
-      href="https://wa.me/923357957721"
+      href="https://wa.me/923230292151"
       target="_blank"
       rel="noopener noreferrer"
     >

@@ -45,6 +45,13 @@ function Projects() {
       type: ["featured", "frontend"],
     },
     {
+      name: "Dexingo Agency",
+      liveLink: "https://dexingo-agency.vercel.app/",
+      preview: DexingoAgencyPhoto,
+      Stack: ["WordPress", "Elementor"],
+      type: ["featured", "frontend"],
+    },
+    {
       name: "PakiQuiz",
       repo: "https://github.com/SalmanZulfiqarShaikh/PakiQuiz",
       liveLink: "https://paki-quiz.vercel.app/",
@@ -55,7 +62,7 @@ function Projects() {
   ];
 
   const filteredProjects = projects.filter((p) => p.type.includes(filter));
-  const filters = ["featured", "frontend", "fullstack", "agents", "NoCode/LowCode"];
+  const filters = ["Featured", "Frontend", "Fullstack", "Agents", "Backend"];
 
   return (
     <section

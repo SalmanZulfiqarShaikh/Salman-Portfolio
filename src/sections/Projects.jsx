@@ -44,13 +44,13 @@ function Projects() {
       Stack: ["Swiper JS", "Vanilla JS", "Vanilla CSS"],
       type: ["featured", "frontend"],
     },
-    {
-      name: "Dexingo Agency",
-      liveLink: "https://dexingo-agency.vercel.app/",
-      preview: DexingoAgencyPhoto,
-      Stack: ["WordPress", "Elementor"],
-      type: ["featured", "frontend"],
-    },
+    // {
+    //   name: "Dexingo Agency",
+    //   liveLink: "https://dexingo-agency.vercel.app/",
+    //   preview: DexingoAgencyPhoto,
+    //   Stack: ["WordPress", "Elementor"],
+    //   type: ["featured", "frontend"],
+    // },
     {
       name: "PakiQuiz",
       repo: "https://github.com/SalmanZulfiqarShaikh/PakiQuiz",

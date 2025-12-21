@@ -11,7 +11,6 @@ function Projects() {
   const [filter, setFilter] = useState("featured");
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect if mobile for hover vs static layout
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1366);
     handleResize();
@@ -26,7 +25,7 @@ function Projects() {
       liveLink: "https://beats-by-dre-nine.vercel.app/",
       preview: BeatsByDREPhoto,
       Stack: ["React", "Framer Motion", "Tailwind","Swiper JS"],
-      type: ["featured", "frontend"],
+      type: ["Featured", "Frontend"],
     },
     {
       name: "Film Vault",
@@ -34,7 +33,7 @@ function Projects() {
       liveLink: "https://filmvaultpk.vercel.app/",
       preview: FilmVaultPhoto,
       Stack: ["React", "Tailwind", "React Router", "AppWrite", "Swiper JS", "API"],
-      type: ["featured", "frontend"],
+      type: ["Featured", "Frontend"],
     },
     {
       name: "Kolachi Beans",
@@ -42,22 +41,15 @@ function Projects() {
       liveLink: "https://kolachi-beans.vercel.app/",
       preview: kolachiBeansPhoto,
       Stack: ["Swiper JS", "Vanilla JS", "Vanilla CSS"],
-      type: ["featured", "frontend"],
+      type: ["Featured", "Frontend"],
     },
-    // {
-    //   name: "Dexingo Agency",
-    //   liveLink: "https://dexingo-agency.vercel.app/",
-    //   preview: DexingoAgencyPhoto,
-    //   Stack: ["WordPress", "Elementor"],
-    //   type: ["featured", "frontend"],
-    // },
     {
       name: "PakiQuiz",
       repo: "https://github.com/SalmanZulfiqarShaikh/PakiQuiz",
       liveLink: "https://paki-quiz.vercel.app/",
       preview: PakiQuizPhoto,
       Stack: ["Vanilla CSS", "Vanilla JS"],
-      type: ["featured", "frontend"],
+      type: ["Featured", "Frontend"],
     },
   ];
 

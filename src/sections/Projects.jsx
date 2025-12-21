@@ -8,7 +8,7 @@ import BeatsByDREPhoto from "../assets/images/beatsbydre.webp";
 import PakiQuizPhoto from "../assets/images/pakiquiz.webp";
 
 function Projects() {
-  const [filter, setFilter] = useState("featured");
+  const [filter, setFilter] = useState("Featured");
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

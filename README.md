@@ -3,7 +3,8 @@ Not another glowy template clone — this one’s designed to feel engineered, n
 
 🔗 Live Site
 
-https://salmanzulfiqarshaikh.vercel.app
+https://salmanzulfi.dev
+
 
 ⚙️ Tech Stack
 

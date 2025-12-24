@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FaGraduationCap } from "react-icons/fa6";
-import { FaCode } from "react-icons/fa";
+import { FaBriefcase } from "react-icons/fa";
 import { AiOutlineRise } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import UptoCard from "../components/UptoCard";
@@ -16,14 +16,15 @@ function Upto() {
 
   const cards = [
     {
-      title: "Mastering Frontend",
-      points: [
-        "Refining TailwindCSS design patterns",
-        "Experimenting with React 19 features",
-        "Learning  Design Systems",
-      ],
-      icon: FaCode
-    },
+  title: "Professional Experience",
+  points: [
+    "Full Stack Development & AI Automation Intern at eOcean",
+    "Building AI-driven automation and agentic workflows",
+    "Working with real-world systems, APIs, and scalable architectures",
+  ],
+  icon: FaBriefcase
+}
+,
     {
       title: "Skill Development",
       points: [

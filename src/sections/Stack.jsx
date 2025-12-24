@@ -18,13 +18,13 @@ function Stack() {
   const inView = useInView(ref, { once: false, amount: 0.2 });
 
   const skills = [
+    {name: "n8n", logo: n8n},
     { name: "React", logo: reactLogo },
     { name: "Tailwind", logo: tailwindLogo },
     {name: "Supabase", logo: supabase},
     { name: "JavaScript", logo: jsLogo },
     {name: "Python", logo: python},
     {name: "Java", logo: java},
-    {name: "n8n", logo: n8n},
     { name: "Git", logo: gitLogo },
     { name: "Framer Motion", logo: framerLogo },
     { name: "Redux", logo: reduxLogo },

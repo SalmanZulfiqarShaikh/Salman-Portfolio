@@ -6,6 +6,7 @@ import kolachiBeansPhoto from "../assets/images/kolachibeans.webp";
 import FilmVaultPhoto from "../assets/images/filmVault.webp";
 import BeatsByDREPhoto from "../assets/images/beatsbydre.webp";
 import PakiQuizPhoto from "../assets/images/pakiquiz.webp";
+import clarityPhoto from "../assets/images/clarity.webp";
 
 function Projects() {
   const [filter, setFilter] = useState("Featured");
@@ -20,11 +21,11 @@ function Projects() {
 
   const projects = [
     {
-      name: "Beats By DRE – Reimagined",
-      repo: "https://github.com/SalmanZulfiqarShaikh/BeatsByDRE",
-      liveLink: "https://beats-by-dre-nine.vercel.app/",
-      preview: BeatsByDREPhoto,
-      Stack: ["React", "Framer Motion", "Tailwind","Swiper JS"],
+      name: "Clarity AI",
+      repo: "https://github.com/SalmanZulfiqarShaikh/clarity-ai",
+      liveLink: "https://clarity-ai-wheat.vercel.app/",
+      preview: clarityPhoto,
+      Stack: ["React", "Tailwind", "TypeScript", "Framer Motion",],
       type: ["Featured", "Frontend"],
     },
     {
@@ -33,6 +34,14 @@ function Projects() {
       liveLink: "https://filmvaultpk.vercel.app/",
       preview: FilmVaultPhoto,
       Stack: ["React", "Tailwind", "React Router", "AppWrite", "Swiper JS", "API"],
+      type: ["Featured", "Frontend"],
+    },
+    {
+      name: "Beats By DRE – Reimagined",
+      repo: "https://github.com/SalmanZulfiqarShaikh/BeatsByDRE",
+      liveLink: "https://beats-by-dre-nine.vercel.app/",
+      preview: BeatsByDREPhoto,
+      Stack: ["React", "Framer Motion", "Tailwind","Swiper JS"],
       type: ["Featured", "Frontend"],
     },
     {

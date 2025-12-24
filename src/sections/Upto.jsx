@@ -18,12 +18,16 @@ function Upto() {
     {
   title: "Professional Experience",
   points: [
-    "Full Stack Development & AI Automation Intern at eOcean",
+    <>
+    Development & AI Automation Intern at{" "}
+    <span className="text-[#ad8d51] font-semibold">eOcean</span>
+  </>,
     "Building AI-driven automation and agentic workflows",
-    "Working with real-world systems, APIs, and scalable architectures",
+    "Working on real-world systems and scalable solutions",
   ],
   icon: FaBriefcase
 }
+
 ,
     {
       title: "Skill Development",

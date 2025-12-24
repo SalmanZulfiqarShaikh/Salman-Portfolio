@@ -62,7 +62,9 @@ function Projects() {
     },
   ];
 
-  const filteredProjects = projects.filter((p) => p.type.includes(filter));
+  const filteredProjects = projects
+  .filter((p) => p.type.includes(filter))
+  .slice(0, filter === "Featured" ? 4 : projects.length);
   const filters = ["Featured", "Frontend", "Fullstack", "Agents", "Backend"];
 
   return (

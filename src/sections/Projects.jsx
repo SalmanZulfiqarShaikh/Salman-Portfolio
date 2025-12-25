@@ -21,9 +21,9 @@ function Projects() {
 
   const projects = [
     {
-      name: "Clarity AI",
-      repo: "https://github.com/SalmanZulfiqarShaikh/clarity-ai",
-      liveLink: "https://clarity-ai-wheat.vercel.app/",
+      name: "Nexus AI",
+      repo: "https://github.com/SalmanZulfiqarShaikh/nexus-ai",
+      liveLink: "https://nexus-ai-eight-pi.vercel.app/",
       preview: clarityPhoto,
       Stack: ["React", "Tailwind", "TypeScript", "Framer Motion",],
       type: ["Featured", "Frontend"],

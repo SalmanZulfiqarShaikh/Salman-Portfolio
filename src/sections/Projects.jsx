@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-
+import manifyPhoto from "../assets/images/manify.webp";
 import kolachiBeansPhoto from "../assets/images/kolachibeans.webp";
 import FilmVaultPhoto from "../assets/images/filmVault.webp";
 import BeatsByDREPhoto from "../assets/images/beatsbydre.webp";
 import PakiQuizPhoto from "../assets/images/pakiquiz.webp";
-import clarityPhoto from "../assets/images/clarity.webp";
+import nexusAIPhoto from "../assets/images/nexusAI.webp";
 
 function Projects() {
   const [filter, setFilter] = useState("Featured");
@@ -21,11 +21,11 @@ function Projects() {
 
   const projects = [
     {
-      name: "Nexus AI",
-      repo: "https://github.com/SalmanZulfiqarShaikh/nexus-ai",
-      liveLink: "https://nexus-ai-eight-pi.vercel.app/",
-      preview: clarityPhoto,
-      Stack: ["React", "Tailwind", "TypeScript", "Framer Motion",],
+      name: "Manify Agency",
+      repo: "https://github.com/SalmanZulfiqarShaikh/Manify-agency",
+      liveLink: "https://manify.vercel.app/",
+      preview: manifyPhoto,
+      Stack: ["React", "Tailwind", "TypeScript", "Framer Motion","Swiper JS"],
       type: ["Featured", "Frontend"],
     },
     {
@@ -37,6 +37,14 @@ function Projects() {
       type: ["Featured", "Frontend"],
     },
     {
+      name: "Kolachi Beans",
+      repo: "https://github.com/SalmanZulfiqarShaikh/Kolachi-Beans",
+      liveLink: "https://kolachi-beans.vercel.app/",
+      preview: kolachiBeansPhoto,
+      Stack: ["Swiper JS", "Vanilla JS", "Vanilla CSS"],
+      type: ["Featured", "Frontend"],
+    },
+    {
       name: "Beats By DRE – Reimagined",
       repo: "https://github.com/SalmanZulfiqarShaikh/BeatsByDRE",
       liveLink: "https://beats-by-dre-nine.vercel.app/",
@@ -45,11 +53,11 @@ function Projects() {
       type: ["Featured", "Frontend"],
     },
     {
-      name: "Kolachi Beans",
-      repo: "https://github.com/SalmanZulfiqarShaikh/Kolachi-Beans",
-      liveLink: "https://kolachi-beans.vercel.app/",
-      preview: kolachiBeansPhoto,
-      Stack: ["Swiper JS", "Vanilla JS", "Vanilla CSS"],
+      name: "Nexus AI",
+      repo: "https://github.com/SalmanZulfiqarShaikh/nexus-ai",
+      liveLink: "https://nexus-ai-eight-pi.vercel.app/",
+      preview: nexusAIPhoto,
+      Stack: ["React", "Tailwind", "TypeScript", "Framer Motion",],
       type: ["Featured", "Frontend"],
     },
     {
@@ -65,7 +73,7 @@ function Projects() {
   const filteredProjects = projects
   .filter((p) => p.type.includes(filter))
   .slice(0, filter === "Featured" ? 4 : projects.length);
-  const filters = ["Featured", "Frontend", "Fullstack", "Agents", "Backend"];
+  const filters = ["Featured", "Fullstack", "Automations", "Agents", "Frontend"];
 
   return (
     <section

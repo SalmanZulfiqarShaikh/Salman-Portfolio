@@ -21,15 +21,11 @@ function Stack() {
     {name: "n8n", logo: n8n},
     { name: "React", logo: reactLogo },
     { name: "Tailwind", logo: tailwindLogo },
-    {name: "Supabase", logo: supabase},
     { name: "JavaScript", logo: jsLogo },
-    {name: "Python", logo: python},
-    {name: "Java", logo: java},
+    {name: "Supabase", logo: supabase},
     { name: "Git", logo: gitLogo },
     { name: "Framer Motion", logo: framerLogo },
     { name: "Redux", logo: reduxLogo },
-    { name: "Bootstrap", logo: bootstrapLogo },
-    {name: "WordPress", logo: wordPress},
   ];
 
   return (

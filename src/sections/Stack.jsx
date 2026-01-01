@@ -25,7 +25,6 @@ function Stack() {
     {name: "Supabase", logo: supabase},
     { name: "Git", logo: gitLogo },
     { name: "Framer Motion", logo: framerLogo },
-    { name: "Redux", logo: reduxLogo },
   ];
 
   return (

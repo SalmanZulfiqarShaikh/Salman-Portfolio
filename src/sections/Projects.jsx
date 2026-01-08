@@ -7,6 +7,11 @@ import FilmVaultPhoto from "../assets/images/filmVault.webp";
 import BeatsByDREPhoto from "../assets/images/beatsbydre.webp";
 import PakiQuizPhoto from "../assets/images/pakiquiz.webp";
 import nexusAIPhoto from "../assets/images/nexusAI.webp";
+import crypto from "../assets/images/crypto.webp";
+import expenseTracker from "../assets/images/ExpenseTracker.webp";
+import githubBattleWars from "../assets/images/githubBattleWars.webp";
+import crud from "../assets/images/CRUD.webp";
+import VIBES from "../assets/images/VIBES.webp";
 
 function Projects() {
   const [filter, setFilter] = useState("Featured");
@@ -45,6 +50,22 @@ function Projects() {
       type: ["Featured", "Frontend"],
     },
     {
+      Name: "Vibes Music Player",
+      repo: "https://github.com/SalmanZulfiqarShaikh/jsrevisit/tree/main/spotify",
+      liveLink: "https://spotiplay-theta.vercel.app/",
+      preview: VIBES,
+      Stack: ["Vanilla JS","Vanilla CSS"],
+      type: ["Featured", "Frontend"],
+    },
+    {
+      name: "Inventory CRUD App",
+      repo: "https://github.com/SalmanZulfiqarShaikh/jsrevisit/tree/main/CRUD",
+      liveLink: "https://inventory-management-system.vercel.app/",
+      preview: crud,
+      Stack: ["Vanilla JS", "Vanilla CSS", ],
+      type: ["Featured", "Frontend"],
+    },
+    {
       name: "Beats By DRE – Reimagined",
       repo: "https://github.com/SalmanZulfiqarShaikh/BeatsByDRE",
       liveLink: "https://beats-by-dre-nine.vercel.app/",
@@ -53,11 +74,35 @@ function Projects() {
       type: ["Featured", "Frontend"],
     },
     {
+      name: "Github Battle Wars",
+      repo: "https://github.com/SalmanZulfiqarShaikh/jsrevisit/tree/main/GithubBattle",
+      liveLink: "https://github-battle-wars.vercel.app/",
+      preview: githubBattleWars,
+      Stack: ["Vanilla CSS", "Vanilla JS", "GitHub API"],
+      type: ["Featured", "Frontend"],
+    },
+    {
+      name: "BhaiNance Crypto",
+      repo: "https://github.com/SalmanZulfiqarShaikh/crypto",
+      liveLink: "https://bhainance.vercel.app/",
+      preview: crypto,
+      Stack: ["Vanilla JS", "Vanilla CSS", "Crypto API"],
+      type: ["Featured", "Frontend"],
+    },
+    {
       name: "Nexus AI",
       repo: "https://github.com/SalmanZulfiqarShaikh/nexus-ai",
       liveLink: "https://nexus-ai-eight-pi.vercel.app/",
       preview: nexusAIPhoto,
       Stack: ["React", "Tailwind", "TypeScript", "Framer Motion",],
+      type: ["Featured", "Frontend"],
+    },
+    {
+      name: "Expense Tracker x Currency Converter",
+      repo: "https://github.com/SalmanZulfiqarShaikh/jsrevisit/tree/main/advanceexpensetrack",
+      liveLink: "https://expenseadvanced.vercel.app/",
+      preview: expenseTracker,
+      Stack: ["Vanilla CSS", "Vanilla JS", "Exchange Rate API"],
       type: ["Featured", "Frontend"],
     },
     {

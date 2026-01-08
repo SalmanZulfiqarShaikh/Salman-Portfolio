@@ -130,7 +130,7 @@ function Projects() {
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-4xl md:text-6xl font-serif font-semibold text-[#0d0d0d]/90 mb-12"
+        className="text-4xl md:text-6xl font-serif font-semibold text-[#0d0d0d]/90 mb-12 text-center"
       >
         Featured Projects
       </motion.h1>
@@ -160,6 +160,7 @@ function Projects() {
               key={i}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{once: true}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="bg-white/90 rounded-2xl overflow-hidden shadow-lg border border-[#bfa980]/30 group hover:shadow-2xl transition-all duration-500"
             >

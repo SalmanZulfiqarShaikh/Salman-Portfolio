@@ -50,7 +50,7 @@ function Projects() {
       type: ["Featured", "Frontend"],
     },
     {
-      Name: "Vibes Music Player",
+      name: "Vibes Music Player",
       repo: "https://github.com/SalmanZulfiqarShaikh/jsrevisit/tree/main/spotify",
       liveLink: "https://spotiplay-theta.vercel.app/",
       preview: VIBES,

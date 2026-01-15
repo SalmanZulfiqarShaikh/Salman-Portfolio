@@ -50,15 +50,7 @@ function Projects() {
       type: ["Featured", "Frontend"],
     },
     {
-      name: "Beats By DRE – Reimagined",
-      repo: "https://github.com/SalmanZulfiqarShaikh/BeatsByDRE",
-      liveLink: "https://beats-by-dre-nine.vercel.app/",
-      preview: BeatsByDREPhoto,
-      Stack: ["React", "Framer Motion", "Tailwind","Swiper JS"],
-      type: ["Featured", "Frontend"],
-    },
-    {
-      name: "Vibes Music Player",
+      Name: "Vibes Music Player",
       repo: "https://github.com/SalmanZulfiqarShaikh/jsrevisit/tree/main/spotify",
       liveLink: "https://spotiplay-theta.vercel.app/",
       preview: VIBES,

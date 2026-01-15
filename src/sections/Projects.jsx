@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Linkedin } from "lucide-react"; // Added Linkedin icon
 import manifyPhoto from "../assets/images/manify.webp";
 import kolachiBeansPhoto from "../assets/images/kolachibeans.webp";
 import FilmVaultPhoto from "../assets/images/filmVault.webp";
 import BeatsByDREPhoto from "../assets/images/beatsbydre.webp";
 import PakiQuizPhoto from "../assets/images/pakiquiz.webp";
 import nexusAIPhoto from "../assets/images/nexusAI.webp";
-import crypto from "../assets/images/crypto.webp";
 import expenseTracker from "../assets/images/ExpenseTracker.webp";
 import githubBattleWars from "../assets/images/githubBattleWars.webp";
 import crud from "../assets/images/CRUD.webp";
 import VIBES from "../assets/images/VIBES.webp";
+import autoEmail from "../assets/images/auto-email.webp"; 
 
 function Projects() {
   const [filter, setFilter] = useState("Featured");
@@ -50,7 +50,15 @@ function Projects() {
       type: ["Featured", "Frontend"],
     },
     {
-      Name: "Vibes Music Player",
+      name: "Beats By DRE – Reimagined",
+      repo: "https://github.com/SalmanZulfiqarShaikh/BeatsByDRE",
+      liveLink: "https://beats-by-dre-nine.vercel.app/",
+      preview: BeatsByDREPhoto,
+      Stack: ["React", "Framer Motion", "Tailwind","Swiper JS"],
+      type: ["Featured", "Frontend"],
+    },
+    {
+      name: "Vibes Music Player",
       repo: "https://github.com/SalmanZulfiqarShaikh/jsrevisit/tree/main/spotify",
       liveLink: "https://spotiplay-theta.vercel.app/",
       preview: VIBES,
@@ -66,27 +74,11 @@ function Projects() {
       type: ["Featured", "Frontend"],
     },
     {
-      name: "Beats By DRE – Reimagined",
-      repo: "https://github.com/SalmanZulfiqarShaikh/BeatsByDRE",
-      liveLink: "https://beats-by-dre-nine.vercel.app/",
-      preview: BeatsByDREPhoto,
-      Stack: ["React", "Framer Motion", "Tailwind","Swiper JS"],
-      type: ["Featured", "Frontend"],
-    },
-    {
       name: "Github Battle Wars",
       repo: "https://github.com/SalmanZulfiqarShaikh/jsrevisit/tree/main/GithubBattle",
       liveLink: "https://github-battle-wars.vercel.app/",
       preview: githubBattleWars,
       Stack: ["Vanilla CSS", "Vanilla JS", "GitHub API"],
-      type: ["Featured", "Frontend"],
-    },
-    {
-      name: "BhaiNance Crypto",
-      repo: "https://github.com/SalmanZulfiqarShaikh/crypto",
-      liveLink: "https://bhainance.vercel.app/",
-      preview: crypto,
-      Stack: ["Vanilla JS", "Vanilla CSS", "Crypto API"],
       type: ["Featured", "Frontend"],
     },
     {
@@ -113,11 +105,19 @@ function Projects() {
       Stack: ["Vanilla CSS", "Vanilla JS"],
       type: ["Featured", "Frontend"],
     },
+    {
+      name: "Auto Email Replier",
+      post: "https://www.linkedin.com/posts/salmanzulfiqarshaikh_n8n-automation-aiworkflow-activity-7413838568915243008-81Ar?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD0t4FEBeYy_JZ4We8uwlQnsuRDxj8PjKP8",
+      preview: autoEmail,
+      Stack: ["n8n", "Multiple APIs"],
+      type: ["Featured", "Automations"]
+    }
   ];
 
   const filteredProjects = projects
-  .filter((p) => p.type.includes(filter))
-  .slice(0, filter === "Featured" ? 4 : projects.length);
+    .filter((p) => p.type.includes(filter))
+    .slice(0, filter === "Featured" ? 4 : projects.length);
+  
   const filters = ["Featured", "Fullstack", "Automations", "Agents", "Frontend"];
 
   return (
@@ -125,7 +125,6 @@ function Projects() {
       id="projects"
       className="min-h-screen flex flex-col items-center justify-center px-6 py-24 bg-[#f5f2ea]"
     >
-      {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +134,6 @@ function Projects() {
         Featured Projects
       </motion.h1>
 
-      {/* Filter Buttons */}
       <div className="flex flex-wrap justify-center gap-4 mb-12">
         {filters.map((f) => (
           <button
@@ -152,7 +150,6 @@ function Projects() {
         ))}
       </div>
 
-      {/* Projects Grid */}
       {filteredProjects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full max-w-6xl">
           {filteredProjects.map((proj, i) => (
@@ -160,7 +157,7 @@ function Projects() {
               key={i}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{once: true}}
+              viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="bg-white/90 rounded-2xl overflow-hidden shadow-lg border border-[#bfa980]/30 group hover:shadow-2xl transition-all duration-500"
             >
@@ -178,9 +175,43 @@ function Projects() {
 }
 
 function ProjectCard({ proj, isMobile }) {
+  const renderButtons = (textColorClass) => (
+    <>
+      {proj.liveLink && (
+        <a
+          href={proj.liveLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex items-center gap-2 ${textColorClass} transition-all`}
+        >
+          <ExternalLink size={18} /> Live
+        </a>
+      )}
+      {proj.repo && (
+        <a
+          href={proj.repo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex items-center gap-2 ${textColorClass} transition-all`}
+        >
+          <Github size={18} /> Code
+        </a>
+      )}
+      {proj.post && (
+        <a
+          href={proj.post}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={`flex items-center gap-2 ${textColorClass} transition-all`}
+        >
+          <Linkedin size={18} /> View Post
+        </a>
+      )}
+    </>
+  );
+
   return (
     <div className="relative overflow-hidden">
-      {/* Image */}
       <img
         src={proj.preview}
         alt={proj.name}
@@ -188,37 +219,20 @@ function ProjectCard({ proj, isMobile }) {
         loading="lazy"
       />
 
-      {/* Desktop Overlay */}
       {!isMobile && (
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <h3 className="text-2xl font-semibold text-white mb-3 font-serif text-center px-3">
             {proj.name}
           </h3>
-          <p className="text-sm text-gray-200 mb-4">
+          <p className="text-sm text-gray-200 mb-4 px-4 text-center">
             {proj.Stack?.join(" • ")}
           </p>
           <div className="flex gap-6">
-            <a
-              href={proj.liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[#bfa980] hover:text-white transition-all"
-            >
-              <ExternalLink size={18} /> Live
-            </a>
-            <a
-              href={proj.repo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[#bfa980] hover:text-white transition-all"
-            >
-              <Github size={18} /> Code
-            </a>
+            {renderButtons("text-[#bfa980] hover:text-white")}
           </div>
         </div>
       )}
 
-      {/* Mobile Layout (Static Info Below) */}
       {isMobile && (
         <div className="p-5 text-center">
           <h3 className="text-xl font-semibold text-[#0d0d0d]/90 font-serif mb-2">
@@ -228,22 +242,7 @@ function ProjectCard({ proj, isMobile }) {
             {proj.Stack?.join(" • ")}
           </p>
           <div className="flex justify-center gap-6">
-            <a
-              href={proj.liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[#bfa980] hover:text-black transition-all"
-            >
-              <ExternalLink size={18} /> Live
-            </a>
-            <a
-              href={proj.repo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-[#bfa980] hover:text-black transition-all"
-            >
-              <Github size={18} /> Code
-            </a>
+            {renderButtons("text-[#bfa980] hover:text-black")}
           </div>
         </div>
       )}

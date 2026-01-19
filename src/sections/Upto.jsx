@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { useTheme } from "../contexts/theme";
 import { FaGraduationCap } from "react-icons/fa6";
 import { FaBriefcase } from "react-icons/fa";
 import { AiOutlineRise } from "react-icons/ai";
@@ -9,26 +10,30 @@ import UptoCard from "../components/UptoCard";
 function Upto() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, amount: 0.2 });
+  const { themeMode } = useTheme();
 
   const date = new Date();
   const month = date.toLocaleString("default", { month: "long" });
   const year = date.getFullYear();
 
+  // Dynamic colors
+  const bgColor = themeMode === "dark" ? "bg-[#0d0d0d]" : "bg-[#F5F0E6]";
+  const headingColor = themeMode === "dark" ? "text-white/90" : "text-[#0d0d0d]/90";
+  const textColor = themeMode === "dark" ? "text-white/70" : "text-[#0d0d0d]/70";
+
   const cards = [
     {
-  title: "Professional Experience",
-  points: [
-    <>
-    Development & AI Automation Intern at{" "}
-    <span className="text-[#ad8d51] font-semibold">eOcean</span>
-  </>,
-    "Building AI-driven automation and agentic workflows",
-    "Working on real-world systems and scalable solutions",
-  ],
-  icon: FaBriefcase
-}
-
-,
+      title: "Professional Experience",
+      points: [
+        <>
+          Development & AI Automation Intern at{" "}
+          <span className="text-[#ad8d51] font-semibold">eOcean</span>
+        </>,
+        "Building AI-driven automation and agentic workflows",
+        "Working on real-world systems and scalable solutions",
+      ],
+      icon: FaBriefcase
+    },
     {
       title: "Skill Development",
       points: [
@@ -62,7 +67,7 @@ function Upto() {
     <section
       ref={ref}
       id="upto"
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-24 bg-[#F5F0E6]"
+      className={`min-h-screen flex flex-col items-center justify-center px-6 py-24 ${bgColor} transition-colors duration-500`}
     >
       {/* Heading */}
       <motion.div
@@ -71,7 +76,7 @@ function Upto() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="text-center mb-16"
       >
-        <h1 className="text-4xl md:text-6xl font-serif font-semibold text-[#0d0d0d]/90 mb-4">
+        <h1 className={`text-4xl md:text-6xl font-serif font-semibold ${headingColor} mb-4 transition-colors duration-500`}>
           What Am I Doing Now?
         </h1>
         
@@ -80,7 +85,7 @@ function Upto() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-          className="text-[#0d0d0d]/70 text-lg md:text-xl font-light font-sans"
+          className={`${textColor} text-lg md:text-xl font-light font-sans transition-colors duration-500`}
         >
           (Updated:{" "}
           <span className="text-[#bfa980] font-medium">

@@ -1,19 +1,24 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { useTheme } from "../contexts/theme";
 
 function Hero() {
   const ref = useRef(null);
   const inView = useInView(ref, { amount: 0.5, once: false });
+  const { themeMode } = useTheme();
+
+  // Dynamic colors based on theme
+  const headingColor = themeMode === "dark" ? "text-white/90" : "text-[#0d0d0d]/90";
+  const taglineColor = themeMode === "dark" ? "text-white/70" : "text-[#0d0d0d]/70";
+  const bgColor = themeMode === "dark" ? "bg-[#0d0d0d]" : "bg-[#f5f2ea]";
 
   return (
     <section
       ref={ref}
       id="home"
-      className="relative flex flex-col justify-center items-center min-h-[90vh] px-6 text-center pt-32 overflow-hidden"
+      className={`relative flex flex-col justify-center items-center min-h-[90vh] px-6 text-center pt-32 overflow-hidden ${bgColor} transition-colors duration-500`}
     >
-     
-
       {/* Main Heading */}
       <motion.h1
         initial={{ opacity: 0, y: 60 }}
@@ -23,7 +28,7 @@ function Hero() {
             : { opacity: 0, y: -60, transition: { duration: 0.8 } }
         }
         transition={{ duration: 1, ease: "easeOut" }}
-        className="text-[#0d0d0d]/90 font-semibold text-5xl sm:text-7xl md:text-8xl leading-tight font-serif"
+        className={`${headingColor} font-semibold text-5xl sm:text-7xl md:text-8xl leading-tight font-serif transition-colors duration-500`}
       >
         Salman Zulfiqar Shaikh
       </motion.h1>
@@ -47,7 +52,7 @@ function Hero() {
         initial={{ opacity: 0 }}
         animate={inView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ duration: 1.2, delay: 0.8 }}
-        className="text-[#0d0d0d]/70 mt-3 text-base sm:text-lg italic font-light"
+        className={`${taglineColor} mt-3 text-base sm:text-lg italic font-light transition-colors duration-500`}
       >
         Crafting timeless digital experiences with code.
       </motion.p>
@@ -62,7 +67,7 @@ function Hero() {
         transition={{ duration: 1, delay: 1.2 }}
         className="mt-10 inline-block border border-[#bfa980] text-[#bfa980] px-6 py-2 rounded-full hover:bg-[#bfa980] hover:text-[#0d0d0d] transition-all"
       >
-        Let’s Work Together
+        Let's Work Together
       </motion.a>
 
       {/* Scroll Down Hint */}

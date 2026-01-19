@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Linkedin } from "lucide-react"; // Added Linkedin icon
+import { ExternalLink, Github, Linkedin } from "lucide-react";
+import { useTheme } from "../contexts/theme"; // Import Theme Hook
+
+// Images
 import manifyPhoto from "../assets/images/manify.webp";
 import kolachiBeansPhoto from "../assets/images/kolachibeans.webp";
 import FilmVaultPhoto from "../assets/images/filmVault.webp";
@@ -16,6 +19,20 @@ import autoEmail from "../assets/images/auto-email.webp";
 function Projects() {
   const [filter, setFilter] = useState("Featured");
   const [isMobile, setIsMobile] = useState(false);
+  const { themeMode } = useTheme(); // Access Theme Context
+
+  // Dynamic Theme Colors
+  const sectionBg = themeMode === "dark" ? "bg-[#0d0d0d]" : "bg-[#f5f2ea]";
+  const headingColor = themeMode === "dark" ? "text-white/90" : "text-[#0d0d0d]/90";
+  
+  // Card Styles
+  const cardBg = themeMode === "dark" ? "bg-[#1c1c1c]" : "bg-white/90";
+  const cardBorder = themeMode === "dark" ? "border-[#bfa980]/20" : "border-[#bfa980]/30";
+  
+  // Filter Button Styles
+  const filterBtnInactive = themeMode === "dark" 
+    ? "text-white/80 hover:bg-[#bfa980]/20" 
+    : "text-[#0d0d0d]/80 hover:bg-[#bfa980]/10";
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 1366);
@@ -50,7 +67,7 @@ function Projects() {
       type: ["Featured", "Frontend"],
     },
     {
-      Name: "Vibes Music Player",
+      name: "Vibes Music Player",
       repo: "https://github.com/SalmanZulfiqarShaikh/jsrevisit/tree/main/spotify",
       liveLink: "https://spotiplay-theta.vercel.app/",
       preview: VIBES,
@@ -115,13 +132,13 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col items-center justify-center px-6 py-24 bg-[#f5f2ea]"
+      className={`min-h-screen flex flex-col items-center justify-center px-6 py-24 transition-colors duration-500 ${sectionBg}`}
     >
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="text-4xl md:text-6xl font-serif font-semibold text-[#0d0d0d]/90 mb-12 text-center"
+        className={`text-4xl md:text-6xl font-serif font-semibold mb-12 text-center transition-colors duration-500 ${headingColor}`}
       >
         Featured Projects
       </motion.h1>
@@ -134,7 +151,7 @@ function Projects() {
             className={`px-4 py-2 rounded-full text-sm md:text-base border transition-all duration-300 ${
               filter === f
                 ? "bg-[#bfa980] text-white border-[#bfa980]"
-                : "border-[#bfa980] text-[#0d0d0d]/80 hover:bg-[#bfa980]/10"
+                : `border-[#bfa980] ${filterBtnInactive}`
             }`}
           >
             {f.charAt(0).toUpperCase() + f.slice(1)}
@@ -151,7 +168,7 @@ function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-white/90 rounded-2xl overflow-hidden shadow-lg border border-[#bfa980]/30 group hover:shadow-2xl transition-all duration-500"
+              className={`${cardBg} rounded-2xl overflow-hidden shadow-lg border ${cardBorder} group hover:shadow-2xl transition-all duration-500`}
             >
               <ProjectCard proj={proj} isMobile={isMobile} />
             </motion.div>
@@ -167,6 +184,13 @@ function Projects() {
 }
 
 function ProjectCard({ proj, isMobile }) {
+  const { themeMode } = useTheme();
+
+  // Mobile View Dynamic Colors
+  const mobileTitleColor = themeMode === "dark" ? "text-white/90" : "text-[#0d0d0d]/90";
+  const mobileTextColor = themeMode === "dark" ? "text-white/70" : "text-[#0d0d0d]/70";
+  const mobileBtnHover = themeMode === "dark" ? "hover:text-white" : "hover:text-black";
+
   const renderButtons = (textColorClass) => (
     <>
       {proj.liveLink && (
@@ -211,6 +235,7 @@ function ProjectCard({ proj, isMobile }) {
         loading="lazy"
       />
 
+      {/* Desktop Overlay (Always Dark bg, so text is always white) */}
       {!isMobile && (
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
           <h3 className="text-2xl font-semibold text-white mb-3 font-serif text-center px-3">
@@ -225,16 +250,17 @@ function ProjectCard({ proj, isMobile }) {
         </div>
       )}
 
+      {/* Mobile Card Body (Theme Dependent) */}
       {isMobile && (
         <div className="p-5 text-center">
-          <h3 className="text-xl font-semibold text-[#0d0d0d]/90 font-serif mb-2">
+          <h3 className={`text-xl font-semibold font-serif mb-2 transition-colors duration-500 ${mobileTitleColor}`}>
             {proj.name}
           </h3>
-          <p className="text-sm text-[#0d0d0d]/70 mb-4">
+          <p className={`text-sm mb-4 transition-colors duration-500 ${mobileTextColor}`}>
             {proj.Stack?.join(" • ")}
           </p>
           <div className="flex justify-center gap-6">
-            {renderButtons("text-[#bfa980] hover:text-black")}
+            {renderButtons(`text-[#bfa980] ${mobileBtnHover}`)}
           </div>
         </div>
       )}

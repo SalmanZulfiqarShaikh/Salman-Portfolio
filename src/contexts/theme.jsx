@@ -1,13 +1,13 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 export const ThemeContext = createContext({
-  themeMode: "light",
+  themeMode: "dark",
   lightMode: () => {},
   darkMode: () => {},
 });
 
 export const ThemeProvider = ({ children }) => {
-  const [themeMode, setThemeMode] = useState("light");
+  const [themeMode, setThemeMode] = useState("dark");
 
   const lightMode = () => {
     setThemeMode("light");

@@ -77,7 +77,7 @@ function Projects() {
     {
       name: "Inventory CRUD App",
       repo: "https://github.com/SalmanZulfiqarShaikh/jsrevisit/tree/main/CRUD",
-      liveLink: "https://inventory-management-system.vercel.app/",
+      liveLink: "https://inventory-manageent-system.vercel.app/",
       preview: crud,
       Stack: ["Vanilla JS", "Vanilla CSS", ],
       type: ["Featured", "Frontend"],

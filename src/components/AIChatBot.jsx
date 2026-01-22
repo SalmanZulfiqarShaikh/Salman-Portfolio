@@ -6,6 +6,7 @@ import { useTheme } from "../contexts/theme";
 function AIChatbot() {
   const [isOpen, setIsOpen] = useState(false);
   const { themeMode } = useTheme();
+  const realage = new Date();
   
   // Dynamic theme colors
   const modalBg = themeMode === "dark" ? "bg-[#1a1a1a]" : "bg-white";
@@ -65,7 +66,7 @@ You are an AI assistant representing Salman. Here's information about him:
 
 BACKGROUND:
 - Born/Raised: Karachi, Pakistan
-- DOB: 4 Oct 2006
+- DOB: 4 Oct 2006 (today is ${realage} give answer appropriate to that )
 - Education: Pursuing BSCS at University of Karachi (UBIT), NED Certified Web Dev, Udemy Certified Agentic AI
 - Current Role: Dev & AI Automation Intern at eOcean
 - Proffesion: Full Stack AI Engineer

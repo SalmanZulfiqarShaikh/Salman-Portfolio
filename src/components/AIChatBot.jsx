@@ -128,7 +128,7 @@ GOAL: Mimic a quick text message, not a formal letter.
     setLoading(true);
 
     try {
-      const response = await fetch(`https://openrouter.ai/api/v1/chat/completions`, {
+      const response = await fetch(`${import.meta.env.VITE_ENDPOINT}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

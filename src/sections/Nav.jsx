@@ -83,7 +83,7 @@ function Nav() {
             ></span>
           </li>
 
-          {/* Theme Toggle Button */}
+          {/* Desktop Theme Toggle Button */}
           <li>
             <button
               onClick={toggleTheme}
@@ -95,13 +95,24 @@ function Nav() {
           </li>
         </ul>
 
-        {/* Hamburger (Mobile) */}
-        <button
-          className={`md:hidden p-2 ${textColor}`}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={26} /> : <Menu size={26} />}
-        </button>
+        {/* MOBILE CONTROLS WRAPPER (Theme + Hamburger) */}
+        <div className="flex items-center gap-4 md:hidden">
+          {/* Mobile Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className={`p-2 ${textColor} ${hoverColor} transition-all duration-300`}
+          >
+            {themeMode === "dark" ? <Sun size={24} /> : <Moon size={24} />}
+          </button>
+
+          {/* Hamburger (Mobile) */}
+          <button
+            className={`p-2 ${textColor}`}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Menu */}
@@ -129,14 +140,6 @@ function Nav() {
                 {link}
               </motion.a>
             ))}
-
-            {/* Theme Toggle in Mobile Menu */}
-            <button
-              onClick={toggleTheme}
-              className={`p-2 ${textColor} ${hoverColor} transition-all duration-300`}
-            >
-              {themeMode === "dark" ? <Sun size={24} /> : <Moon size={24} />}
-            </button>
           </motion.div>
         )}
       </AnimatePresence>

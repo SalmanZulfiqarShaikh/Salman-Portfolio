@@ -89,7 +89,7 @@ SKILLS
 - AI / Automation: n8n, CrewAI, LangChain, Supabase (Vector DB)
 
 ════════════════════
-PROJECTS (CLICKABLE)
+PROJECTS
 ════════════════════
 - Manify Agency: https://manify.vercel.app/
 - Film Vault: https://filmvaultpk.vercel.app/
@@ -97,11 +97,11 @@ PROJECTS (CLICKABLE)
 - Beats by Dre: https://beats-by-dre-nine.vercel.app/
 
 ════════════════════
-SOCIAL LINKS (CLICKABLE ONLY)
+SOCIAL LINKS
 ════════════════════
-- LinkedIn: https://linkedin.com/in/salmanzulfiqarshaikh
-- GitHub: https://github.com/salmanzulfiqarshaikh
-- Instagram: https://instagram.com/salmanzulfiqar_
+- LinkedIn: /salmanzulfiqarshaikh
+- GitHub: /salmanzulfiqarshaikh
+- Instagram: /salmanzulfiqar_
 
 ════════════════════
 CONTACT

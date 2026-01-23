@@ -318,7 +318,7 @@ Short. Sharp. Controlled savage — no overdoing it.
                         : `${assistantMsgBg} ${assistantMsgText} rounded-bl-none shadow-sm border ${borderColor}`
                     }`}
                   >
-                    <p className="leading-relaxed whitespace-pre-wrap">{msg.content}</p>
+                    <p className="leading-relaxed whitespace-pre-wrap break-words">{msg.content}</p>
                   </div>
 
                   {msg.role === 'user' && (
@@ -371,9 +371,9 @@ Short. Sharp. Controlled savage — no overdoing it.
                   <Send size={18} />
                 </button>
               </div>
-              {/* <p className={`text-[10px] ${footerText} mt-1 text-center transition-colors duration-500`}>
+              <p className={`text-[10px] ${footerText} mt-1 text-center transition-colors duration-500`}>
                 Powered by AI • Resets hourly
-              </p> */}
+              </p>
             </div>
           </motion.div>
         )}

@@ -59,6 +59,14 @@ function Projects() {
       type: ["Featured", "Frontend"],
     },
     {
+      name: "Beats by Dre - ReImagined",
+      repo: "https://github.com/SalmanZulfiqarShaikh/BeatsByDRE",
+      liveLink: "https://beats-by-dre-nine.vercel.app/",
+      preview: BeatsByDREPhoto,
+      Stack: ["React", "Tailwind", "JavaScript", "Framer Motion","Swiper JS"],
+      type: ["Featured", "Frontend"],
+    },
+    {
       name: "Kolachi Beans",
       repo: "https://github.com/SalmanZulfiqarShaikh/Kolachi-Beans",
       liveLink: "https://kolachi-beans.vercel.app/",
